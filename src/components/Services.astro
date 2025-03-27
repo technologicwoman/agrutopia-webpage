@@ -1,0 +1,45 @@
+---
+// Import  images
+import { Image } from 'astro:assets';
+import services01 from '../assets/images/services-01.jpg';
+import services02 from '../assets/images/services-02.jpg';
+import services03 from '../assets/images/services-03.jpg';
+---
+
+<section id="services" class="py-20 px-4" id="services">
+  <div class="container mx-auto">
+    <div class="max-w-3xl mb-16">
+      <div class="relative mb-8">
+        <h2 class="text-4xl font-bold mb-2">Servicios</h2>
+        <div class="w-20 h-1 bg-primary"></div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="w-full h-80 relative rounded-lg overflow-hidden">
+        <div class="bg-primary text-white font-bold text-center px-4 py-2 text-xl">
+          CONSULTORIA AGROECOLOGICA
+        </div>
+        <Image src={services01} alt="Farm field" class="w-full h-80 object-cover" />
+      </div>
+      <div class="w-full h-80 relative rounded-lg overflow-hidden">
+        <div class="bg-primary text-white font-bold text-center px-4 py-2 text-xl">
+          AGROECOTURISMO
+        </div>
+        <img src="https://placehold.co/600x400" alt="Farm field" class="w-full h-80 object-cover" />
+      </div>
+      <div class="w-full h-80 relative rounded-lg overflow-hidden">
+        <div class="bg-primary text-white font-bold text-center px-4 py-2 text-xl">
+          CO-WORKING RURAL
+        </div>
+        <img src="https://placehold.co/600x400" alt="Farm field" class="w-full h-80 object-cover" />
+      </div>
+    </div>
+
+    <div class="text-right mt-8">
+      <div class="bg-primary text-white px-4 py-2 text-xl inline-block">
+        03
+      </div>
+    </div>
+  </div>
+</section>
