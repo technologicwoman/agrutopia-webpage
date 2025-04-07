@@ -1,0 +1,28 @@
+/****** Import custom fonts ******/
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/****** Import Tailwindcss ******/
+@import "tailwindcss";
+
+/* Boston Angel */
+@font-face {
+    font-family: 'Boston Angel';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/BostonAngelRegular.ttf') format('truetype');
+}
+
+/****** Theme Variables ******/
+@theme {
+    --color-main-green: #3A5430;
+    --color-light-green: #627A33;
+    --color-main-yellow: #FAC86B;
+    --color-light-yellow: #DDA933;
+    --color-rust: #9E3C0F;
+    --color-dark: #222D3E;
+    --color-white: #EFE5BC;
+
+    --font-serif: 'Boston Angel', serif;
+    --font-sans: 'Inter', sans-serif;
+}

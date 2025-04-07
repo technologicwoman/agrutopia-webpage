@@ -2,9 +2,10 @@
 // Import  images
 import { Image } from 'astro:assets';
 import heroImage from '../assets/images/hero-bg.png';
+import logo from '../assets/images/logo.png';
 ---
 
-<section id="#agrutopia-hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+<section id="#agrutopia-hero" class="relative h-screen flex justify-center overflow-hidden">
   <Image
     src={heroImage} 
     alt="Agrutopia Hero image" 
@@ -12,7 +13,25 @@ import heroImage from '../assets/images/hero-bg.png';
   />
   <div class="absolute inset-0 bg-black/30"></div>
   
-  <div class="relative text-center text-white">
-    <h1 class="text-6xl tracking-widest md:text-8xl font-bold mb-4">AGRUTOPIA</h1>
+  <div class="flex flex-col items-center mt-[100px] px-10 z-10 md:px-20">
+    <Image
+        src={logo} 
+        alt="Agrutopia logo image" 
+        class="w-[400px]"
+    />
+    
+    <h2 class="text-2xl text-center font-serif tracking-wide text-white mt-4 md:text-4xl">
+      Embarcando un viaje hacia la sostenibilidad y la agroecología en Colombia.
+    </h2>
+    <p class="text-center text-white mt-4 md:text-sm">
+      Agrutopia es un espacio donde la naturaleza y la tecnología se unen para crear un futuro sostenible.
+    </p>
+
+    <div class="relative text-center text-white mt-20">
+      <a href="#agrutopia-hero" class="text-medium font-semibold bg-main-yellow text-dark py-4 px-6 rounded-full hover:bg-light-yellow transition duration-300">
+        Vive la experiencia
+      </a>
+    </div>
   </div>
+  
 </section>
