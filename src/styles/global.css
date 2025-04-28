@@ -4,6 +4,7 @@
 
 /****** Import Tailwindcss ******/
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Boston Angel */
 @font-face {

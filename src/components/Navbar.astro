@@ -8,7 +8,7 @@ const menuItems = [
 ];
 ---
 <header>
-  <div class="fixed z-50 w-full transition-all duration-300 mx-auto py-2 px-4 lg:px-8" id="navbar">
+  <div class="fixed z-50 w-full transition-all duration-300 mx-auto lg:py-2 lg:px-8" id="navbar">
     <div class="flex h-16 items-center justify-center">
       <div class="hidden" id="logo">
         <a class="block text-teal-600" href="#">
@@ -56,25 +56,25 @@ const menuItems = [
         </div>
       </div>
     </div>
-  </div>
-   <!-- Hamburger menu for mobile -->
-  <div class="fixed top-0 z-50 bg-main-green container mx-auto px-4 py-4 flex justify-between md:hidden">
-    <div class="font-serif text-xl font-bold tracking-wide text-main-yellow">Agrutopia</div>
-      <!-- Hamburger lines that transform to X -->
-    <div id="menu-toggle" class="block w-8 h-8 cursor-pointer mt-2" aria-label="Toggle menu">
-      <!-- Line 1 - rotates to form the top part of X -->
-      <span class="block absolute h-0.5 w-6 bg-main-yellow transform transition-all duration-300 ease-in-out" 
-            id="line1"></span>
-      
-      <!-- Line 2 - fades out when menu opens -->
-      <span class="block absolute h-0.5 w-6 bg-main-yellow transform transition-all duration-300 ease-in-out mt-2" 
-            id="line2"></span>
-      
-      <!-- Line 3 - rotates to form the bottom part of X -->
-      <span class="block absolute h-0.5 w-6 bg-main-yellow transform transition-all duration-300 ease-in-out mt-4" 
-            id="line3"></span>
+    <div class="fixed top-0 z-50 bg-main-green container px-4 py-4 flex justify-between md:hidden" id="mobile-header">
+      <div class="font-serif text-xl font-bold tracking-wide text-main-yellow">Agrutopia</div>
+        <!-- Hamburger lines that transform to X -->
+      <div id="menu-toggle" class="block w-8 h-8 cursor-pointer mt-2" aria-label="Toggle menu">
+        <!-- Line 1 - rotates to form the top part of X -->
+        <span class="block absolute h-0.5 w-6 bg-main-yellow transform transition-all duration-300 ease-in-out" 
+              id="line1"></span>
+        
+        <!-- Line 2 - fades out when menu opens -->
+        <span class="block absolute h-0.5 w-6 bg-main-yellow transform transition-all duration-300 ease-in-out mt-2" 
+              id="line2"></span>
+        
+        <!-- Line 3 - rotates to form the bottom part of X -->
+        <span class="block absolute h-0.5 w-6 bg-main-yellow transform transition-all duration-300 ease-in-out mt-4" 
+              id="line3"></span>
+      </div>
     </div>
   </div>
+   <!-- Hamburger menu for mobile -->
 
   <div id="mobile-menu" class="fixed inset-0 z-40 mt-[64px] transform translate-x-full transition-transform duration-800 ease-in-out">
     <!-- Menu content -->
@@ -140,7 +140,8 @@ const menuItems = [
   });
 
   const navbar = document.getElementById('navbar');
-  
+  const mobileHeader = document.getElementById('mobile-header');
+
   const updateNavbar = () => {
     if (window.scrollY > 50) {
       navbar?.classList.add('bg-main-green', 'shadow-lg', 'backdrop-blur-sm');
